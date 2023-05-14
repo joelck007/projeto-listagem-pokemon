@@ -1,0 +1,132 @@
+body{
+    font-family: 'Poppins', sans-serif; /* é fonte que peguei no google para deixar o texto mais bonito */
+
+    max-width: 1280px;/* estabelece a largura máxima de um elemento.*/
+    margin: 0 auto;/* define a área de margem nos quatro lados do elemento.*/
+
+    background-color: #5e5b5bad; /*cor do fundo do site*/
+    color: #333333;/*cor de texto*/
+}
+
+body.modo-escuro{
+    background-color: #212121;
+    color: #f5f5f5;
+}
+
+header{
+   /* background-color: green;*/
+    display: flex; /*O display: flex funciona de uma maneira diferente dos outros displays. Quando colocamos essa propriedade em um elemento, esse elemento se torna um flex container, a partir daí podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+    justify-content:  space-between; /*é usada para alinhar os elementos ao longo do eixo principal (main-axis), cuja direção (row ou column) é definida a partir da propriedade flex-direction. E space-between é O primeiro item é deslocado para o início do eixo principal, o último é deslocado para o final do eixo principal e os demais são distribuídos uniformemente entre eles*/
+    padding: 25px; /*espassamento da bordas dos iscones*/
+}
+
+header .logo,
+header .imagem-botao{
+    width: 30px;
+    transition: 0.2s ease-in-out;
+} /*para utilizar calss é com .nome da classe*/
+
+header #botao-alterar-tema{
+    background: none;
+    border: none;
+    
+
+}/*para utilizar id é com #nome do id*/
+
+header .logo:hover,
+header .imagem-botao:hover,
+main .cartao-pokemon:hover{
+    transform: scale(1.10);
+    cursor: pointer;
+}/*quando passar o mouse no icone e no cartão, ele aumenta*/
+
+main{
+    /*background-color: antiquewhite;*/
+    padding: 25px;
+}/* dando a cor e espassamento da classe do ul conhecido como pai*/
+
+main .listagem-pokemon{
+    display: flex;
+    flex-wrap: wrap;/* define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas. Se o argumento for valido, ele define a direção em que as linhas são empilhadas.*/
+    gap: 30px;/*define os espaços (gutters (en-US)) entre as linhas e colunas.*/
+    justify-content: center;/*para centralizar os elementos*/
+    
+}/* da classe ul vai colocar os elementos um do lado do outro com espacamento certo*/
+
+main .cartao-pokemon{
+    background-color: #d8e3ec;
+    width: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;/*Os itens são organizados em forma de colunas iniciando de cima para baixo; column-reverse: Os itens são organizados em forma de colunas iniciando de baixo para cima.*/
+    align-items: center;/* tem a função de alinhar os elementos no eixo transversal.*/
+    gap: 15px;
+    border-radius: 15px; /*para deixar as bordas rendodadas*/
+    transition: 0.2s ease-in-out;/* fazendo efeito ao passar mouse no cartão, ease-in-out é o efeito de entrada e saida do mouse*/
+
+}/*dando a cor na classe li conhecido como filho*/
+
+main .cartao-pokemon:hover{
+    background-color: #96d9d6;
+}/* para fuincionar a propriedade que esta no cartão , precisei criar esse hover do cartão e a cor quando passar o mouse em cima e também é especifica para cartão*/
+
+.modo-escuro .cartao-pokemon{
+background-color: #a8a8a8;
+}/*quanclicar no icone do sol para lua vai mudar a cor do cartão*/
+
+main .cartao-pokemon .informacoes{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}/*para não ficar quebrado o titulo do cartão*/
+
+main .cartao-pokemon .informacoes span{
+   /* background-color: aqua;*/
+    padding: 5px;
+    text-transform: uppercase;/*deixa a letra mauscula*/
+    font-size: 17px;/*tamnaho da fonte*/
+}/* cor no titulo do cartão*/
+
+main .cartao-pokemon .gif{
+    width: 90px;
+    height: 90px;
+    /*background-color: gray;*/
+}/*tamanho do icone e a cor */
+
+main .cartao-pokemon .tipos{
+  /*background-color: white;*/
+    display: flex;
+    gap: 15px;
+}/* para dar espassamento nos tipos com cor de fundo*/
+
+main .cartao-pokemon .tipo{
+    padding: 8px;
+    border-radius: 10px;
+}/*para dar borda nos tipos*/
+
+.grama{
+    background-color: #7ac74c;
+}
+
+.veneno{
+    background-color: #df67ddfd;
+}
+
+.fogo{
+    background-color: #ee8130;
+}
+
+.agua{background-color: #6390f0;
+}
+
+.inseto{
+    background-color: #a6b91a;
+}
+
+main .descricao{
+    max-height: 80px;
+    overflow-y: scroll; /*barra de rolagem do texto*/
+    font-size: 14px;
+    padding-right: 10px;
+}/*para ajustar as fonte e acrescentar a barra de rolagem do texto

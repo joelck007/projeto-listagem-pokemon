@@ -1,0 +1,8 @@
+*{
+margin: 0;/* é utilizada para definir a distância entre o conteúdo e a borda do container */
+padding: 0;/*enquanto isso, a propriedade margin cria um espaçamento externo “empurrando” os elementos adjacentes.*/
+box-sizing: border-box;/*é utilizada para alterar a propriedade padrão da box model, usada para calcular larguras (widths) e alturas (heights) dos elementos.*/
+}
+
+ul{list-style: none;
+}
